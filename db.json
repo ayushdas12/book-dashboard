@@ -1,0 +1,84 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-Help",
+      "year": 2018,
+      "status": "Available"
+    },
+    {
+      "id": "7b0a",
+      "title": "Avengers ",
+      "author": "Stan lee",
+      "genre": "Fiction",
+      "year": "2025",
+      "status": "Available"
+    },
+    {
+      "id": "556a",
+      "title": " To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "year": "1971",
+      "status": "Available"
+    },
+    {
+      "id": "75bf",
+      "title": " The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction",
+      "year": "2020",
+      "status": "Issued"
+    },
+    {
+      "id": "c8fe",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Fiction",
+      "year": "1950",
+      "status": "Available"
+    },
+    {
+      "id": "7563",
+      "title": " The Hobbit",
+      "author": "Stan lee",
+      "genre": "Fiction",
+      "year": "1950",
+      "status": "Available"
+    },
+    {
+      "id": "9ff0",
+      "title": " The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Self-Help",
+      "year": "1955",
+      "status": "Issued"
+    },
+    {
+      "id": "8654",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "genre": "Self-Help",
+      "year": "1955",
+      "status": "Available"
+    },
+    {
+      "id": "0512",
+      "title": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "genre": "Thriller",
+      "year": "2023",
+      "status": "Issued"
+    },
+    {
+      "id": "1a5b",
+      "title": "The Da Vinci Code\t",
+      "author": "Dan Brown",
+      "genre": "Fiction",
+      "year": "1945",
+      "status": "Available"
+    }
+  ]
+}
