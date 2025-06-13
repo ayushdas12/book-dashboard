@@ -71,7 +71,6 @@ export default function Home() {
     currentPage * booksPerPage
   );
 
-  // ✅ Loading spinner added here
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -84,9 +83,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-100 text-gray-900 font-sans">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100 text-gray-900 font-sans">
       {/* Sidebar */}
-      <aside className="w-64 bg-white border-r border-gray-200 hidden md:block">
+      <aside className="hidden md:block w-full md:w-64 bg-white border-r border-gray-200">
         <div className="p-6">
           <h2 className="text-xl font-bold text-blue-700 mb-6">MyBooks</h2>
           <nav className="flex flex-col gap-4 text-gray-700 text-sm">
@@ -102,7 +101,7 @@ export default function Home() {
       <div className="flex-1 flex flex-col">
         {/* Top navbar */}
         <header className="bg-white shadow">
-          <div className="px-6 py-4 flex justify-between items-center">
+          <div className="px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <h1 className="text-2xl font-bold text-blue-700">Book Dashboard</h1>
             <button
               onClick={handleAddClick}
@@ -114,19 +113,19 @@ export default function Home() {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 px-6 py-8 max-w-7xl mx-auto w-full">
+        <main className="flex-1 px-4 sm:px-6 py-8 max-w-7xl mx-auto w-full">
           {/* Filters */}
-          <div className="flex flex-wrap items-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-6">
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by title or author"
-              className="border border-gray-300 rounded px-4 py-2 w-64 shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+              className="border border-gray-300 rounded px-4 py-2 w-full sm:w-64 shadow-sm focus:outline-none focus:ring focus:border-blue-300"
             />
             <select
               value={genreFilter}
               onChange={(e) => setGenreFilter(e.target.value)}
-              className="border border-gray-300 rounded px-4 py-2 shadow-sm"
+              className="border border-gray-300 rounded px-4 py-2 shadow-sm w-full sm:w-auto"
             >
               <option value="">All Genres</option>
               <option value="Fiction">Fiction</option>
@@ -136,7 +135,7 @@ export default function Home() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="border border-gray-300 rounded px-4 py-2 shadow-sm"
+              className="border border-gray-300 rounded px-4 py-2 shadow-sm w-full sm:w-auto"
             >
               <option value="">All Status</option>
               <option value="Available">Available</option>
@@ -145,13 +144,15 @@ export default function Home() {
           </div>
 
           {/* Table */}
-          <div className="bg-white rounded-lg shadow p-4">
-            <BookTable books={paginatedBooks} onEdit={handleEditClick} />
+          <div className="bg-white rounded-lg shadow p-4 overflow-x-auto">
+            <div className="min-w-[640px]">
+              <BookTable books={paginatedBooks} onEdit={handleEditClick} />
+            </div>
           </div>
 
           {/* Pagination */}
           <div className="flex flex-col items-center justify-center mt-6 gap-3">
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
                   key={i}
