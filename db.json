@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Atomic Habits",
       "author": "James Clear",
       "genre": "Self-Help",
@@ -75,6 +75,14 @@
     {
       "id": "1a5b",
       "title": "The Da Vinci Code\t",
+      "author": "Dan Brown",
+      "genre": "Fiction",
+      "year": "1945",
+      "status": "Available"
+    },
+    {
+      "id": "7070",
+      "title": "Ayush",
       "author": "Dan Brown",
       "genre": "Fiction",
       "year": "1945",
